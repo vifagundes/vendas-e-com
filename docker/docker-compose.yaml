@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    build: ./docker
+    volumes:
+      - ./app:/app  # Monta o diretório local na pasta /app do contêiner
+      - ./app/datasets:/app/datasets  # Monta os dados dentro do contêiner
+    ports:
+      - "8501:8501"
