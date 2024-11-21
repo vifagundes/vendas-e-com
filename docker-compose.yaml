@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  streamlit:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app.py:/app/app.py
+      - ./datasets:/app/datasets
+      - ./requirements.txt:/app/requirements.txt
